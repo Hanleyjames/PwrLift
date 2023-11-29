@@ -1,10 +1,10 @@
 const axios = require('axios');
-modules.export = async function addLift(lift_name, sets, reps, weight, baseUrl){
-    await axios.post(`/${baseUrl}/lift`, {
+module.exports = async function addLift(lift_name, sets, reps, pounds, baseUrl){
+    await axios.post(`${baseUrl}/lift`, {
         lift_name: `${lift_name}`,
         reps: `${reps}`,
         sets: `${sets}`,
-        weight: `${weight}`
+        pounds: `${pounds}`
       })
       .then(function (response) {
         console.log(response);

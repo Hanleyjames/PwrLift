@@ -1,6 +1,6 @@
 const axios = require('axios');
-exports.module = async function udatePr(lift, pounds, baseUrl){
-    await axios.put(`/${baseUrl}/pr`, {
+module.exports = async function updatePr(lift, pounds, baseUrl){
+    await axios.put(`${baseUrl}/pr`, {
         lift_name: `${lift}`,
         pounds: `${pounds}`
       })
